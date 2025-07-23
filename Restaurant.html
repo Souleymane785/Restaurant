@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Savory Bistro | Fine Dining Experience</title>
+    <!-- Performance Optimization: Preload Fonts & Defer Non-Critical JS -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    </noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Savory Bistro - Fine dining restaurant in NY. Discover our seasonal menu, reserve a table, and enjoy a memorable culinary experience.">
+    <meta name="keywords" content="restaurant, fine dining, NY, menu, reservation, chef, local ingredients, Savory Bistro">
+    <meta name="author" content="Savory Bistro">
+    <meta property="og:title" content="Savory Bistro | Fine Dining Experience">
+    <meta property="og:description" content="Discover Savory Bistro's seasonal menu, reserve a table, and enjoy a memorable culinary experience in NY.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://savorybistro.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Savory Bistro | Fine Dining Experience">
+    <meta name="twitter:description" content="Discover Savory Bistro's seasonal menu, reserve a table, and enjoy a memorable culinary experience in NY.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80">
+    <link rel="canonical" href="https://savorybistro.com/">
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 shadow-md z-50 transition-all duration-300" role="navigation" aria-label="Main Navigation">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold heading-font text-red-700 flex items-center" aria-label="Savory Bistro Home">
+                <span class="text-yellow-600 mr-1"><i class="fas fa-utensils" aria-hidden="true"></i></span>
+                Savory Bistro
+            </a>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-red-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu">
+                <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+            </button>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8" role="menubar">
+                <a href="#home" class="nav-link active text-red-700 font-medium" role="menuitem" tabindex="0">Home</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-red-700 font-medium" role="menuitem" tabindex="0">About</a>
+                <a href="#menu" class="nav-link text-gray-700 hover:text-red-700 font-medium" role="menuitem" tabindex="0">Menu</a>
+                <a href="#reservation" class="nav-link text-gray-700 hover:text-red-700 font-medium" role="menuitem" tabindex="0">Reservations</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-red-700 font-medium" role="menuitem" tabindex="0">Contact</a>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg" aria-label="Mobile Menu" role="menu">
+            <a href="#home" class="block py-2 text-red-700 font-medium border-b border-gray-100" role="menuitem" tabindex="0">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-red-700 font-medium border-b border-gray-100" role="menuitem" tabindex="0">About</a>
+            <a href="#menu" class="block py-2 text-gray-700 hover:text-red-700 font-medium border-b border-gray-100" role="menuitem" tabindex="0">Menu</a>
+            <a href="#reservation" class="block py-2 text-gray-700 hover:text-red-700 font-medium border-b border-gray-100" role="menuitem" tabindex="0">Reservations</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-red-700 font-medium" role="menuitem" tabindex="0">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center text-center text-white relative">
+        <div class="container mx-auto px-4">
+            <h1 class="heading-font text-4xl md:text-6xl font-bold mb-6 fade-in">Welcome to Savory Bistro</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto fade-in" style="transition-delay: 0.2s;">Where culinary artistry meets warm hospitality</p>
+            <div class="fade-in" style="transition-delay: 0.4s;">
+                <a href="#menu" class="bg-red-700 hover:bg-red-800 text-white font-bold py-3 px-8 rounded-full inline-block transition duration-300 mr-4">View Menu</a>
+                <a href="#reservation" class="bg-transparent hover:bg-white hover:text-red-700 text-white font-bold py-3 px-8 border-2 border-white rounded-full inline-block transition duration-300 btn-animated">Book a Table</a>
+            </div>
+        </div>
+        <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-4xl scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl font-bold text-red-700 mb-4">Our Story</h2>
+                <div class="w-20 h-1 bg-yellow-600 mx-auto mb-6"></div>
+                <p class="text-gray-700 max-w-3xl mx-auto">Established in 2010, Savory Bistro has been serving authentic cuisine with a modern twist. Our passion for food and commitment to quality has made us a beloved destination for food enthusiasts.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-cream p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 fade-in">
+                    <div class="text-4xl text-yellow-600 mb-4"><i class="fas fa-calendar-alt"></i></div>
+                    <h3 class="heading-font text-xl font-bold mb-2">Since 2010</h3>
+                    <p class="text-gray-700">Over a decade of culinary excellence and unforgettable dining experiences.</p>
+                </div>
+                
+                <div class="bg-cream p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 fade-in" style="transition-delay: 0.2s;">
+                    <div class="text-4xl text-yellow-600 mb-4"><i class="fas fa-home"></i></div>
+                    <h3 class="heading-font text-xl font-bold mb-2">Family-Owned</h3>
+                    <p class="text-gray-700">A family passion project turned into a culinary landmark in the city.</p>
+                </div>
+                
+                <div class="bg-cream p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300 fade-in" style="transition-delay: 0.4s;">
+                    <div class="text-4xl text-yellow-600 mb-4"><i class="fas fa-leaf"></i></div>
+                    <h3 class="heading-font text-xl font-bold mb-2">Locally Sourced</h3>
+                    <p class="text-gray-700">We partner with local farmers and producers to bring you the freshest ingredients.</p>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Our Chef" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="fade-in" style="transition-delay: 0.2s;">
+                    <h3 class="heading-font text-2xl font-bold text-red-700 mb-4">Meet Our Chef</h3>
+                    <p class="text-gray-700 mb-4">Chef Michael Rodriguez, with over 20 years of international experience, brings his innovative approach to traditional recipes, creating dishes that delight both the eyes and the palate.</p>
+                    <p class="text-gray-700 mb-6">"At Savory Bistro, we don't just serve food - we create memorable experiences. Every dish tells a story, and we invite you to be part of that story."</p>
+                <a href="#menu" class="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded-full inline-block transition duration-300 btn-animated">Explore Our Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl font-bold text-red-700 mb-4">Our Menu</h2>
+                <div class="w-20 h-1 bg-yellow-600 mx-auto mb-6"></div>
+                <p class="text-gray-700 max-w-3xl mx-auto">Seasonal ingredients prepared with passion and creativity. Our menu changes regularly to showcase the best of what's fresh and in season.</p>
+            </div>
+            
+            <!-- Menu Tabs -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-md shadow-sm">
+                    <button onclick="filterMenu('all')" class="px-4 py-2 text-sm font-medium rounded-l-lg bg-red-700 text-white focus:outline-none">All</button>
+                    <button onclick="filterMenu('starters')" class="px-4 py-2 text-sm font-medium bg-white text-red-700 hover:bg-gray-100 focus:outline-none">Starters</button>
+                    <button onclick="filterMenu('mains')" class="px-4 py-2 text-sm font-medium bg-white text-red-700 hover:bg-gray-100 focus:outline-none">Main Courses</button>
+                    <button onclick="filterMenu('desserts')" class="px-4 py-2 text-sm font-medium bg-white text-red-700 hover:bg-gray-100 focus:outline-none">Desserts</button>
+                    <button onclick="filterMenu('drinks')" class="px-4 py-2 text-sm font-medium rounded-r-lg bg-white text-red-700 hover:bg-gray-100 focus:outline-none">Drinks</button>
+                </div>
+            </div>
+            
+            <!-- Menu Items -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Starters -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300 starters">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Truffle Arancini" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="heading-font text-xl font-bold text-red-700">Truffle Arancini</h3>
+                            <span class="text-yellow-600 font-bold">$12</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">Crispy risotto balls infused with black truffle and mozzarella, served with aioli.</p>
+                        <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-700">Vegetarian</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300 starters">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Beef Carpaccio" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="heading-font text-xl font-bold text-red-700">Beef Carpaccio</h3>
+                            <span class="text-yellow-600 font-bold">$16</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">Thinly sliced raw beef tenderloin with capers, parmesan, and truffle oil.</p>
+                        <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-700">Gluten Free</span>
+                    </div>
+                </div>
+                
+                <!-- Main Courses -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300 mains">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Filet Mignon" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="heading-font text-xl font-bold text-red-700">Filet Mignon</h3>
+                            <span class="text-yellow-600 font-bold">$38</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">8oz grass-fed beef tenderloin with red wine reduction, roasted potatoes, and seasonal vegetables.</p>
+                        <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-700">Signature Dish</span>
+                    </div>
+                </div>
+                
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300 mains">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wild Mushroom Risotto" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="heading-font text-xl font-bold text-red-700">Wild Mushroom Risotto</h3>
+                            <span class="text-yellow-600 font-bold">$24</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">Creamy Arborio rice with seasonal wild mushrooms, white wine, and parmesan.</p>
+                        <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-700">Vegetarian</span>
+                    </div>
+                </div>
+                
+                <!-- Desserts -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300 desserts">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80" alt="Chocolate Soufflé" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="heading-font text-xl font-bold text-red-700">Chocolate Soufflé</h3>
+                            <span class="text-yellow-600 font-bold">$14</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">Warm chocolate soufflé with a molten center, served with vanilla bean ice cream.</p>
+                        <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-700">Must Try</span>
+                    </div>
+                </div>
+                
+                <!-- Drinks -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md transition duration-300 drinks">
+                    <img src="https://images.unsplash.com/photo-1436076863939-06870fe779c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Signature Cocktails" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="heading-font text-xl font-bold text-red-700">Signature Cocktails</h3>
+                            <span class="text-yellow-600 font-bold">$14</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">Ask your server about our seasonal craft cocktails featuring local spirits and fresh ingredients.</p>
+                        <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-xs font-semibold text-gray-700">Seasonal</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in">
+                <a href="#reservation" class="bg-red-700 hover:bg-red-800 text-white font-bold py-3 px-8 rounded-full inline-block transition duration-300 btn-animated">Reserve Your Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl font-bold text-red-700 mb-4">Make a Reservation</h2>
+                <div class="w-20 h-1 bg-yellow-600 mx-auto mb-6"></div>
+                <p class="text-gray-700 max-w-3xl mx-auto">Reserve your table online or call us at (555) 123-4567. For parties of 8 or more, please call to make arrangements.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-cream p-8 rounded-lg shadow-md fade-in">
+                <form id="reservation-form">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 mb-6">
+                        <div>
+                            <label for="date" class="block text-gray-700 font-medium mb-2">Date</label>
+                            <input type="date" id="date" name="date" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+                        </div>
+                        <div>
+                            <label for="time" class="block text-gray-700 font-medium mb-2">Time</label>
+                            <select id="time" name="time" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+                                <option value="">Select Time</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="17:30">5:30 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="18:30">6:30 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="19:30">7:30 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="20:30">8:30 PM</option>
+                                <option value="21:00">9:00 PM</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="guests" class="block text-gray-700 font-medium mb-2">Number of Guests</label>
+                            <select id="guests" name="guests" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+                                <option value="">Select Guests</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6 People</option>
+                                <option value="7">7 People</option>
+                                <option value="8">8 People</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="special-requests" class="block text-gray-700 font-medium mb-2">Special Requests (Optional)</label>
+                        <textarea id="special-requests" name="special-requests" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700"></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-red-700 hover:bg-red-800 text-white font-bold py-3 px-8 rounded-full inline-block transition duration-300 btn-animated">Book Table</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="text-center mt-12 fade-in">
+                <p class="text-gray-700 mb-4">Prefer to book via WhatsApp?</p>
+                <a href="https://wa.me/15551234567" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+                <i class="fab fa-whatsapp mr-2"></i> Chat with Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-4xl font-bold text-red-700 mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-yellow-600 mx-auto mb-6"></div>
+                <p class="text-gray-700 max-w-3xl mx-auto">We'd love to hear from you. Visit us, give us a call, or send us a message.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div class="fade-in">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="heading-font text-2xl font-bold text-red-700 mb-6">Get in Touch</h3>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="text-yellow-600 mr-4 mt-1"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Address</h4>
+                                <p class="text-gray-700">123 Gourmet Avenue<br>Foodie District, NY 10001</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="text-yellow-600 mr-4 mt-1"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Phone</h4>
+                                <p class="text-gray-700">(555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="text-yellow-600 mr-4 mt-1"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                <p class="text-gray-700">info@savorybistro.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-yellow-600 mr-4 mt-1"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Opening Hours</h4>
+                                <p class="text-gray-700 mb-2">Monday - Thursday: 5:00 PM - 10:00 PM</p>
+                                <p class="text-gray-700 mb-2">Friday - Saturday: 5:00 PM - 11:00 PM</p>
+                                <p class="text-gray-700">Sunday: 5:00 PM - 9:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in" style="transition-delay: 0.2s;">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="heading-font text-2xl font-bold text-red-700 mb-6">Send Us a Message</h3>
+                        <form id="contact-form">
+                            <div class="mb-6">
+                                <label for="contact-name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                                <input type="text" id="contact-name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="contact-email" class="block text-gray-700 font-medium mb-2">Your Email</label>
+                                <input type="email" id="contact-email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="contact-subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <input type="text" id="contact-subject" name="subject" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="contact-message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                                <textarea id="contact-message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-700"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-red-700 hover:bg-red-800 text-white font-bold py-3 px-8 rounded-full inline-block transition duration-300 btn-animated">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fade-in">
+                <div class="map-container rounded-lg shadow-xl overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215573813345!2d-73.9878449241647!3d40.74844097138988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1690834241783!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white py-12" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="heading-font text-xl font-bold text-yellow-600 mb-4">Savory Bistro</h3>
+                    <p class="mb-4">Where every meal is a celebration of flavors, craftsmanship, and hospitality.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-yellow-600 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-yellow-600 transition duration-300"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-yellow-600 transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-yellow-600 transition duration-300"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="heading-font text-xl font-bold text-yellow-600 mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-yellow-600 transition duration-300">Home</a></li>
+                        <li><a href="#about" class="hover:text-yellow-600 transition duration-300">About Us</a></li>
+                        <li><a href="#menu" class="hover:text-yellow-600 transition duration-300">Menu</a></li>
+                        <li><a href="#reservation" class="hover:text-yellow-600 transition duration-300">Reservations</a></li>
+                        <li><a href="#contact" class="hover:text-yellow-600 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="heading-font text-xl font-bold text-yellow-600 mb-4">Opening Hours</h3>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <span>Monday - Thursday:</span>
+                            <span>5PM - 10PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Friday - Saturday:</span>
+                            <span>5PM - 11PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday:</span>
+                            <span>5PM - 9PM</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="heading-font text-xl font-bold text-yellow-600 mb-4">Newsletter</h3>
+                    <p class="mb-4">Subscribe to our newsletter for special offers and events.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your Email" class="px-4 py-2 rounded-l-md text-gray-800 w-full focus:outline-none">
+                        <button type="submit" class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded-r-md transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="pt-6 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2023 Savory Bistro. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-red-700 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Chatbot Widget
+    <div id="chatbot-widget" aria-label="Savory Bistro Chatbot" style="position: fixed; bottom: 24px; right: 24px; z-index: 60;">
+        <button id="chatbot-toggle" aria-label="Open chat" class="bg-red-700 text-white p-3 rounded-full shadow-lg btn-animated" style="box-shadow: 0 4px 16px rgba(178,34,34,0.18);">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div id="chatbot-window" class="hidden bg-white text-gray-800 rounded-lg shadow-xl p-4 w-80" style="position: absolute; bottom: 60px; right: 0;">
+            <div class="flex items-center mb-2">
+                <span class="text-red-700 text-xl mr-2"><i class="fas fa-robot"></i></span>
+                <span class="font-bold heading-font">Savory Bistro Chatbot</span>
+            </div>
+            <div id="chatbot-messages" style="height: 180px; overflow-y: auto; background: #f9f9f9; border-radius: 8px; padding: 8px; margin-bottom: 8px; font-size: 0.95rem;"></div>
+            <form id="chatbot-form" class="flex">
+                <input type="text" id="chatbot-input" placeholder="Ask us anything..." class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none" autocomplete="off" aria-label="Type your message">
+                <button type="submit" class="bg-red-700 hover:bg-red-800 text-white px-4 py-2 rounded-r-md btn-animated" aria-label="Send message">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div> --> 
+
+    <script defer>
+        // Mobile Menu Toggle + Animation + Accessibility
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let mobileMenuOpen = false;
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuOpen = !mobileMenuOpen;
+            mobileMenuButton.setAttribute('aria-expanded', mobileMenuOpen);
+            if (mobileMenuOpen) {
+                // Focus first link in mobile menu
+                const firstLink = mobileMenu.querySelector('a');
+                if (firstLink) firstLink.focus();
+            }
+        });
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuOpen = false;
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.focus();
+            });
+        });
+        // Keyboard navigation for mobile menu
+        mobileMenu.addEventListener('keydown', (e) => {
+            const links = Array.from(mobileMenu.querySelectorAll('a'));
+            const index = links.indexOf(document.activeElement);
+            if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (index < links.length - 1) links[index + 1].focus();
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (index > 0) links[index - 1].focus();
+            } else if (e.key === 'Escape') {
+                mobileMenu.classList.add('hidden');
+                mobileMenuOpen = false;
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.focus();
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Active link highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active', 'text-red-700');
+                link.classList.add('text-gray-700');
+                
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active', 'text-red-700');
+                    link.classList.remove('text-gray-700');
+                }
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Menu filtering
+        function filterMenu(category) {
+            const menuItems = document.querySelectorAll('.menu-item');
+            
+            menuItems.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+        // Form submission
+        document.getElementById('reservation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your reservation! We will contact you shortly to confirm.');
+            this.reset();
+        });
+        
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+        
+        // Scroll animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+
+        // Section fade-in animation
+        const sectionElements = document.querySelectorAll('section');
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+        sectionElements.forEach(section => {
+            section.classList.add('section-fade');
+            sectionObserver.observe(section);
+        });
+        
+        // Initialize hero animations
+        window.addEventListener('load', () => {
+            const heroElements = document.querySelectorAll('.hero .fade-in');
+            heroElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add('visible');
+                }, index * 200);
+            });
+        });
+
+        // Chatbot Widget
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const chatbotForm = document.getElementById('chatbot-form');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        let chatbotOpen = false;
+        chatbotToggle.addEventListener('click', () => {
+            chatbotOpen = !chatbotOpen;
+            chatbotWindow.classList.toggle('hidden', !chatbotOpen);
+            if (chatbotOpen) chatbotInput.focus();
+        });
+        chatbotForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const userMsg = chatbotInput.value.trim();
+            if (!userMsg) return;
+            appendChatMessage('You', userMsg);
+            chatbotInput.value = '';
+            setTimeout(() => {
+                appendChatMessage('SavoryBot', getBotReply(userMsg));
+            }, 700);
+        });
+        function appendChatMessage(sender, message) {
+            const msgDiv = document.createElement('div');
+            msgDiv.innerHTML = `<strong>${sender}:</strong> ${message}`;
+            chatbotMessages.appendChild(msgDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+        function getBotReply(msg) {
+            msg = msg.toLowerCase();
+            if (msg.includes('menu')) return 'You can view our menu by clicking "Menu" above. Would you like a recommendation?';
+            if (msg.includes('reservation') || msg.includes('book')) return 'To book a table, use the "Reservations" section or WhatsApp. Need help?';
+            if (msg.includes('hours') || msg.includes('open')) return 'We are open Mon-Thu 5-10PM, Fri-Sat 5-11PM, Sun 5-9PM.';
+            if (msg.includes('address') || msg.includes('location')) return 'We are located at 123 Gourmet Avenue, Foodie District, NY.';
+            if (msg.includes('chef')) return 'Chef Michael Rodriguez leads our kitchen with 20+ years of experience.';
+            if (msg.includes('contact')) return 'You can contact us via phone, email, or the contact form below.';
+            if (msg.includes('hello') || msg.includes('hi')) return 'Hello! How can I assist you today?';
+            return 'Thank you for your message! We will get back to you soon.';
+        }
+    </script>
+</body>
+</html>
